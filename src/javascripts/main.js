@@ -7,6 +7,8 @@ console.error('see you, space cowboy');
 
 const init = () => {
   planets.printPlanetCards();
+  planets.hoverEvent();
+  planets.hideInfo();
 };
 
 init();
