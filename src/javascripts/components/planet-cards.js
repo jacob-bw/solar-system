@@ -10,14 +10,10 @@ const printPlanetCards = () => {
     <div class='row'>
       <div class='col-4'>
         <div class='card'>
-        <img src='${planetCard[i].imageUrl}' class='card-title d-none' alt='picture of ${planetCard[i].name}'>
-        <h5 class='card-title'>${planetCard[i].name}</h5>
           <div class='card-body'>
-            <div class="card-text">${planetCard[i].description}</div>
-            <div class="card-text">Number of Moons: ${planetCard[i].numberOfMoons}</div>
-            <div class="card-text">Name of Largest Moon: ${planetCard[i].nameOfLargestMoon}</div>
-            <div class="card-text">Is this Planet a Gas Giant? ${planetCard[i].isGasPlanet}</div>
-          </div>
+            <img src='${planetCard[i].imageUrl}' class='card-title' alt='picture of ${planetCard[i].name}'>
+            <h5 class='card-title d-none'>${planetCard[i].name}</h5>
+           </div>
         </div>
       </div>
     </div>
@@ -27,9 +23,9 @@ const printPlanetCards = () => {
   }
 };
 
-const hideInfo = () => {
-  $('.card-text').hide();
-};
+// const hideInfo = () => {
+//   $('.card-text').hide();
+// };
 
 // const hoverName = (e) => {
 //   $(e.target).find('#h4').toggleClass('d-none');
@@ -45,10 +41,10 @@ const hideInfo = () => {
 
 // const showImg = () => {
 //   $('.card').hover(hoverImg);
+// // };
+
+// const hoverEvent = () => {
+//   $(e.target).find('card-title').toggleClass()
 // };
 
-const hoverEvent = (e) => {
-  $(e.target).find('.card-title').toggleClass('d-none');
-};
-
-export default { printPlanetCards, hideInfo, hoverEvent };
+export default { printPlanetCards };
