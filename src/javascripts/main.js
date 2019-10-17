@@ -1,5 +1,6 @@
 import '../styles/main.scss';
-import planets from './components/planet-cards';
+import planets from './components/planet-cards/planet-cards';
+import events from './components/cardListEvents/cardListEvents';
 
 console.error('see you, space cowboy');
 
@@ -7,8 +8,7 @@ console.error('see you, space cowboy');
 
 const init = () => {
   planets.printPlanetCards();
-  planets.hoverEvent();
-  planets.hideInfo();
+  events.cardListEvents();
 };
 
 init();
