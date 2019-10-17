@@ -1,0 +1,27 @@
+
+
+#planet-zone {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 10px;
+
+  .card {
+    background-color: darkslategray;
+    margin: 10px;
+    height: 20rem;
+    width: 20rem;
+    
+    .card-body {
+      height: 250px;
+      overflow: hidden;
+    
+      img {
+        width: 100%;
+      }
+
+      .card-title {
+        text-align: center;
+      }
+    }
+  }
+}
