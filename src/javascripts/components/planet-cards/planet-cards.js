@@ -4,20 +4,23 @@ import './planet-cards.scss';
 
 const printPlanetCards = () => {
   const planetCard = planetData.getPlanets();
-  let domString = '';
+  let domString = '<div class ="row">';
   for (let i = 0; i < planetCard.length; i += 1) {
-    domString += '<div class="col">';
-    domString += '<div class="card">';
-    domString += '<div class="card-body">';
-    domString += `<h5 class="card-title">${planetCard[i].name}</h5>`;
-    domString += `<class="card-title hide" src="${planetCard[i].imageUrl}" alt="..."></img>`;
-    domString += '</div>';
-    domString += '</div>';
-    domString += '</div>';
-
-    console.error(planetCard[i].name);
+    const singleArr = planetCard[i];
+    domString += `
+      <div class="col">
+        <div class="card" id=${singleArr.name}>
+          <div class="card-body">
+            <h4 class="planetName">${singleArr.name} <span class="close hide"><button class="closeButton">x</button><span> </h4>
+            <img src="${singleArr.imageUrl}" class="card-img-top hide">
+            <p class="card-text">${singleArr.description}</p>
+          </div>
+        </div> 
+      </div>   
+    `;
+    console.log(planetCard[i].name);
   }
-
+  domString += '</div>';
   utilities.printToDOM('planet-zone', domString);
 };
 
